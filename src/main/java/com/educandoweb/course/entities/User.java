@@ -26,7 +26,7 @@ public class User implements Serializable {
 	private Long id;
 	private String name;
 	private String email;
-	private String phoneString;
+	private String phone;
 	private String password;
 	
 	
@@ -37,11 +37,11 @@ public class User implements Serializable {
 	public User() {
 	}
 
-	public User(Long id, String name, String email, String phoneString, String password) {
+	public User(Long id, String name, String email, String phone, String password) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
-		this.phoneString = phoneString;
+		this.phone = phone;
 		this.password = password;
 	}
 
@@ -69,12 +69,12 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	public String getPhoneString() {
-		return phoneString;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setPhoneString(String phoneString) {
-		this.phoneString = phoneString;
+	public void setPhoneString(String phone) {
+		this.phone = phone;
 	}
 
 	public String getPassword() {
