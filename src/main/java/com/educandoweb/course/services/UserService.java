@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.educandoweb.course.entities.User;
 import com.educandoweb.course.repositories.UserRepository;
+import com.educandoweb.course.services.exceptions.DatabaseException;
 import com.educandoweb.course.services.exceptions.ResourceNotFoundException;
 
 import jakarta.persistence.EntityNotFoundException;
@@ -41,7 +42,7 @@ public class UserService {
 			throw new ResourceNotFoundException(id);
 		}
 		catch (DataIntegrityViolationException e) {
-			throw new DataIntegrityViolationException(e.getMessage());
+			throw new DatabaseException(e.getMessage());
 		}
 	}
 	
